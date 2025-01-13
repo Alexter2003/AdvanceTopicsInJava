@@ -1,6 +1,7 @@
 package list;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class lists {
@@ -16,9 +17,18 @@ public class lists {
             System.out.println(element);
         }
         //Lambda functions (anonymous functions with very compact code)
-        System.out.println("Lambda function");
+        System.out.println("\nLambda function");
         list.forEach( element -> {
             System.out.println("Element: " + element);
         });
+
+        //Reference methods
+        System.out.println("\nReference method");
+        list.forEach(System.out::println);
+
+        //other way to create lists
+        List<String> names =  Arrays.asList("Perdo", "Miguel", "Alexander");
+        System.out.println("\nNames with reference method");
+        names.forEach(System.out::println);
     }
 }
